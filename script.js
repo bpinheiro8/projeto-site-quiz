@@ -75,9 +75,25 @@ const perguntas = [
   },
 ];
 
-const quiz = document.querySelector("");
+const quiz = document.querySelector("#quiz");
 const template = document.querySelector("template");
-const quizItem = template.content.cloneNode(true);
 
 for (const item of perguntas) {
+  //clonando item do template
+  const quizItem = template.content.cloneNode(true);
+  //modificando o H3 com as perguntas
+  quizItem.querySelector("h3").textContent = item.pergunta;
+
+  //laço para a inserção das respostas
+  for (let resposta of item.resposta) {
+    const dt = quizItem.querySelector("dl dt").cloneNode(true);
+    dt.querySelector("span").textContent = resposta;
+
+    quizItem.querySelector("dl").appendChild(dt);
+  }
+
+  quizItem.querySelector("dl dt").remove();
+
+  //insere a pergunta na tela
+  quiz.appendChild(quizItem);
 }
