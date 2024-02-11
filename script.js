@@ -83,6 +83,24 @@ const template = document.querySelector("template");
 for (const item of perguntas) {
   //variavel atribuido o conteúdo da tag template html por 10x
   const quizItem = template.content.cloneNode(true);
+
+  //na tag h3 adicione o conteúdo do array perguntas onde o atributo do objeto seja pergunta
+  quizItem.querySelector("h3").textContent = item.pergunta;
+
+  for (let resposta of item.respostas) {
+    //variavel atribuido o conteúdo de dl dt por 3x a cada objeto
+    const dt = quizItem.querySelector("dl dt").cloneNode(true);
+
+    //na tag span adicione o conteúdo do array perguntas onde o atributo do objeto seja respostas
+    dt.querySelector("span").textContent = resposta;
+
+    //na tag dl atribua o conteúdo de quizItem a div id quiz
+    quizItem.querySelector("dl").appendChild(dt);
+  }
+
+  //remove a primeira resposta fixa do html
+  quizItem.querySelector("dl dt").remove();
+
   //atribuindo o conteúdo de quizItem a div id quiz
   quiz.appendChild(quizItem);
 }
