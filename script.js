@@ -79,6 +79,14 @@ const perguntas = [
 const quiz = document.querySelector("#quiz");
 //variavel atribuido o conteúdo da tag template html
 const template = document.querySelector("template");
+//variavel guarda uma unica informação sem repetição
+const corretas = new Set();
+//variavel recebe o total de itens
+const totalDePerguntas = perguntas.length;
+//variavel para selecionar o valor do html
+const mostraTotal = document.querySelector("#acertos span");
+//alterando a variavel mostraTotal com o valor de corretas + totalDePerguntas
+mostraTotal.textContent = corretas.size + " de " + totalDePerguntas;
 
 for (const item of perguntas) {
   //variavel atribuido o conteúdo da tag template html por 10x
@@ -93,6 +101,27 @@ for (const item of perguntas) {
 
     //na tag span adicione o conteúdo do array perguntas onde o atributo do objeto seja respostas
     dt.querySelector("span").textContent = resposta;
+
+    //na tag input atribuir no parametro name como pergunta + index a cada pergunta, ex: pergunta-0
+    dt.querySelector("input").setAttribute("name", "pergunta-" + perguntas.indexOf(item));
+
+    //na tag input atribuir no parametro value atribua o valor de index
+    dt.querySelector("input").value = item.respostas.indexOf(resposta);
+
+    //captura o evento clicado na mudança de estado
+    dt.querySelector("input").onchange = (event) => {
+      //a variavel estaCorreta true ou false, esta sendo comparado o value do clique com a resposta correta
+      const estaCorreta = event.target.value == item.correta;
+
+      //ao entrar no if deleta caso já exista
+      corretas.delete(item);
+      if (estaCorreta) {
+        //add o item inteiro
+        corretas.add(item);
+      }
+      //alterando a variavel mostraTotal com o valor de corretas + totalDePerguntas
+      mostraTotal.textContent = corretas.size + " de " + totalDePerguntas;
+    };
 
     //na tag dl atribua o conteúdo de quizItem a div id quiz
     quizItem.querySelector("dl").appendChild(dt);
