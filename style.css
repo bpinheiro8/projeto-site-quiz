@@ -1,5 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color1: #f1f5f9;
+  --color2: #a3e635;
+  --color3: #0f172a;
+  --color4: #e2e8f0;
+  --color5: #94a3b8;
+  --color6: #1e293b;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  background: var(--color3);
+}
+
+main {
+  padding: 0.05rem;
+  max-width: 32rem;
+  margin: 0 auto 7rem;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.75%;
+  color: var(--color1);
+}
+
+.quiz-item h3 {
+  color: var(--color4);
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 600;
+  padding: 1.6rem;
+  background: var(--color6);
+}
+
+.quiz-item span {
+  color: var(--color5);
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: normal;
+}
+
+#acertos {
+  background: var(--color2);
+  text-align: center;
+  padding: 1.2rem;
+
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }

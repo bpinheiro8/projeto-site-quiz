@@ -8,28 +8,36 @@
     <link rel="shortcut icon" href="assets/quiz-svgrepo-com.svg" type="image/x-icon" />
   </head>
   <body>
-    <h1>Teste seus conhecimentos</h1>
+    <main>
+      <header>
+        <img
+          src="https://gist.githubusercontent.com/maykbrito/f47569e32fb2b21f2ecc9f4c035c141f/raw/a45997404564112d7596fbb1b9cad5de5521927e/logo.svg"
+          alt="Logo da NLW"
+        />
+        <h1>Teste seus conhecimentos</h1>
+      </header>
 
-    <div id="quiz"></div>
+      <div id="quiz"></div>
 
-    <template>
-      <div class="quiz-item">
-        <h3>Teste é um teste, pergunta 1</h3>
-        <dl>
-          <dt>
-            <input type="radio" name="item" id="item-radio" value="0" />
-            <span>resposta 1</span>
-          </dt>
-        </dl>
+      <template>
+        <div class="quiz-item">
+          <h3>Teste é um teste, pergunta 1</h3>
+          <dl>
+            <dt>
+              <input type="radio" name="item" id="item-radio" value="0" />
+              <span>resposta 1</span>
+            </dt>
+          </dl>
+        </div>
+      </template>
+
+      <div id="acertos">
+        <strong>Acertos</strong>
+        <span>0 de 10</span>
       </div>
-    </template>
 
-    <div id="acertos">
-      <strong>Acertos</strong>
-      <span>0 de 10</span>
-    </div>
-
-    <!--Importa arquivo JS-->
-    <script src="script.js"></script>
+      <!--Importa arquivo JS-->
+      <script src="script.js"></script>
+    </main>
   </body>
 </html>
