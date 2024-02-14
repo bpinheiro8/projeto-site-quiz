@@ -84,6 +84,36 @@ header h1 {
   line-height: 2.4rem;
   font-weight: normal;
   letter-spacing: 0;
+
+  display: grid;
+  grid-template-columns: 1.3rem 1fr;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+input {
+  all: unset;
+  border: 0.1rem solid var(--color5);
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input:checked {
+  border: 0.1rem solid var(--color2);
+}
+
+input:checked::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+
+  background: var(--color2);
+  border-radius: 50%;
 }
 
 #acertos {
