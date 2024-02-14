@@ -1,7 +1,7 @@
-<h1 align="center"> Projeto Introdução a Grid </h1>
+<h1 align="center"> Projeto QUIZ </h1>
 
 <p align="center">
-Programa exclusivo promovido pela Rocketseat para ensino de tecnologias WEB.
+Programa exclusivo promovido pela Rocketseat para ensino de tecnologias WEB, evento NLW Expert.
 </p>
 
 <p align="center">
@@ -18,8 +18,8 @@ Programa exclusivo promovido pela Rocketseat para ensino de tecnologias WEB.
 <br>
 
 <p align="center">
-  <img alt="projeto Explorer 2" src=".github/preview.png" width="100%">
-  <img alt="projeto Explorer 2" src=".github/preview2.png" width="100%">
+  <img alt="projeto Explorer 2" src=".github/preview.png" width="100%"><br>
+  <img alt="projeto Explorer 2" src=".github/preview2.png" width="100%"><br>
   <img alt="projeto Explorer 2" src=".github/preview3.png" width="100%">
 </p>
 
