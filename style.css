@@ -15,6 +15,8 @@
   --color4: #e2e8f0;
   --color5: #94a3b8;
   --color6: #1e293b;
+  --color7: #334155;
+  --color8: #475569;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -35,11 +37,28 @@ main {
   margin: 0 auto 7rem;
 }
 
-h1 {
-  font-size: 3rem;
+header img {
+  margin: 2rem 0 2rem;
+  width: 12.45rem;
+  height: 2.4rem;
+}
+
+header h1 {
+  font-size: 2.3rem;
   line-height: 3.6rem;
   letter-spacing: -0.75%;
   color: var(--color1);
+
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+
+  border-bottom: 0.1rem solid var(--color7);
+}
+
+.quiz-item {
+  margin-top: 2.4rem;
+  border: 0.1rem solid var(--color8);
+  border-radius: 0.6rem;
 }
 
 .quiz-item h3 {
@@ -47,15 +66,24 @@ h1 {
   font-size: 1.8rem;
   line-height: 2.8rem;
   font-weight: 600;
-  padding: 1.6rem;
+
   background: var(--color6);
+
+  padding: 1.6rem 2rem;
 }
 
-.quiz-item span {
-  color: var(--color5);
+.quiz-item dl {
+  padding: 2rem 2.4rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.quiz-item dt {
+  color: var(--color4);
   font-size: 1.4rem;
   line-height: 2.4rem;
   font-weight: normal;
+  letter-spacing: 0;
 }
 
 #acertos {
