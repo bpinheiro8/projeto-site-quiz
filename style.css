@@ -32,8 +32,7 @@ body {
 }
 
 main {
-  padding: 0.05rem;
-  max-width: 32rem;
+  padding: 3rem;
   margin: 0 auto 7rem;
 }
 
@@ -55,27 +54,52 @@ header h1 {
   border-bottom: 0.1rem solid var(--color7);
 }
 
+#quiz {
+  counter-reset: quiz-item;
+}
+
 .quiz-item {
   margin-top: 2.4rem;
   border: 0.1rem solid var(--color8);
   border-radius: 0.6rem;
+
+  overflow: hidden;
 }
 
 .quiz-item h3 {
   color: var(--color4);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 2.8rem;
   font-weight: 600;
 
   background: var(--color6);
 
   padding: 1.6rem 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-shrink: 0;
+}
+
+.quiz-item h3::before {
+  counter-increment: quiz-item;
+  content: counter(quiz-item);
+
+  background: var(--color8);
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
 }
 
 .quiz-item dl {
   padding: 2rem 2.4rem;
-  display: grid;
-  gap: 0.8rem;
 }
 
 .quiz-item dt {
@@ -85,8 +109,7 @@ header h1 {
   font-weight: normal;
   letter-spacing: 0;
 
-  display: grid;
-  grid-template-columns: 1.3rem 1fr;
+  display: flex;
   align-items: center;
   gap: 0.8rem;
 }
@@ -101,6 +124,8 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  flex-shrink: 0;
 }
 
 input:checked {
